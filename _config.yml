@@ -103,5 +103,4 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://github.com/zhzRedstone/zhzredstone.github.io.git
-  branch: master
+  repo: https://github.com/zhzRedstone/zhzredstone.github.io.git
