@@ -334,8 +334,8 @@
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
 			<a><i class="kirafont icon-calendar-fill"></i>2025年03月01日</a>
-			<a><i class="kirafont icon-edit-fill"></i>562 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 2 分钟</a>
+			<a><i class="kirafont icon-edit-fill"></i>1.4k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 6 分钟</a>
 		</div>
 		<html><head></head><body><p>欢迎来到 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! 这是你的第一篇帖子。更多信息请查看 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">文档</a> 。如果你在使用 Hexo 时遇到任何问题，可以在  <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">故障排除</a> 中找到答案，或者在 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>上问我。</p>
 <h2><span id="%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">快速开始</span></h2><h3><span id="%E5%88%9B%E5%BB%BA%E6%96%B0%E5%B8%96%E5%AD%90">创建新帖子</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
@@ -374,79 +374,168 @@
 <p>scaffolds 目录存放着新建文章的模板文件。</p>
 <p>source 目录存放着文章的 Markdown 文件。 是存放用户资源的地方。 除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。 Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</p>
 <p>themes 目录存放着主题文件。</p>
-<h1><span id="%E9%85%8D%E7%BD%AE">配置</span></h1><p>您可以在 _config.yml文件中修改大部分的配置。</p>
-<p><em>网站</em></p>
+<h1><span id="%E9%85%8D%E7%BD%AE">配置</span></h1><p>您可以在 _config.yml文件中修改大部分的配置。<br>参考 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">配置</a> 文档。</p>
+<h1><span id="%E6%8C%87%E4%BB%A4">指令</span></h1><p><em>init</em></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [folder]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>新建一个网站。 如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。<br>先）。 npm 默认随 Node.js 安装。</p>
+<p><em>new</em></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>新建一篇文章。 如果没有设置 <code>layout</code> 的话，默认使用 _config.yml 中的 <code>default_layout</code> 参数代替。 使用布局 <code>draft</code> 来创建草稿。 如果标题包含空格的话，请使用引号括起来。</p>
 <table>
 <thead>
 <tr>
-<th>设置</th>
+<th>选项</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>title</td>
-<td>网站标题</td>
+<td>-p, –path</td>
+<td>文章的路径。 自定义文章的路径。</td>
 </tr>
 <tr>
-<td>subtitle</td>
-<td>网站副标题</td>
+<td>-r, –replace</td>
+<td>如果存在的话，替换当前的文章。</td>
 </tr>
 <tr>
-<td>description</td>
-<td>网站描述</td>
-</tr>
-<tr>
-<td>keywords</td>
-<td>网站关键词</td>
-</tr>
-<tr>
-<td>author</td>
-<td>作者名称</td>
-</tr>
-<tr>
-<td>language</td>
-<td>网站默认语言，采用ISO 639-1 编码</td>
-</tr>
-<tr>
-<td>timezone</td>
-<td>网站时区，默认为电脑时区，参考 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Timezone</a>，例：<code>Asia/Shanghai</code></td>
+<td>-s, –slug</td>
+<td>文章别名。 自定义文章的 URL。</td>
 </tr>
 </tbody></table>
-<p><em>网址</em></p>
+<p>默认情况下，Hexo 会使用文章的标题来决定文章文件的路径。 对于独立页面来说，Hexo 会创建一个以标题为名字的目录，并在目录中放置一个 <code>index.md</code> 文件。 你可以使用 <code>--path</code> 参数来覆盖上述行为、自行决定文件的目录：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page --path about/me "About me"</span><br></pre></td></tr></tbody></table></figure>
+<p>以上命令会创建一个 <code>source/about/me.md</code> 文件，同时 Front Matter 中的 title 为 <code>"About me"</code></p>
+<p>注意！ title 是必须指定的！ 例如，这不会产生您可能期望的行为：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page --path about/me</span><br></pre></td></tr></tbody></table></figure>
+
+<p>此时 Hexo 会创建 <code>source/_posts/about/me.md</code>，同时 <code>me.md</code> 的 Front Matter 中的 title 为 “page”。 这是因为在上述命令中，hexo-cli 将 <code>page</code> 视为指定文章的标题、并采用默认的 <code>layout</code>。</p>
+<p><em>generate</em></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
+
+<p>生成静态文件。</p>
 <table>
 <thead>
 <tr>
-<th>设置</th>
+<th>选项</th>
 <th>描述</th>
-<th>默认值</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>url</td>
-<td>网址，以http://或https://开头</td>
-<td></td>
+<td>-d, –deploy</td>
+<td>在生成完成后部署。</td>
 </tr>
 <tr>
-<td>root</td>
-<td>网站根目录</td>
-<td>url’s pathname</td>
+<td>-w, –watch</td>
+<td>监视文件变动</td>
 </tr>
 <tr>
-<td>permalink</td>
-<td>文章永久链接格式</td>
-<td>:year/:month/:day/:title/</td>
+<td>-b, –bail</td>
+<td>生成过程中如果发生任何未处理的异常则抛出异常</td>
 </tr>
 <tr>
-<td>permalink_defaults</td>
-<td>默认的永久链接参数</td>
-<td></td>
+<td>-f, –force</td>
+<td>强制重新生成</td>
 </tr>
 <tr>
-<td>pretty_urls</td>
-<td>美化URL</td>
-<td>false</td>
+<td>-c, –concurrency</td>
+<td>要同时生成的文件的最大数量。 默认无限制</td>
 </tr>
 </tbody></table>
+<p><em>publish</em></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发表草稿。</p>
+<p><em>server</em></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
+
+<p>启动服务器。 默认情况下，访问网址为： <a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p, –port</td>
+<td>重设端口</td>
+</tr>
+<tr>
+<td>-s, –static</td>
+<td>只使用静态文件</td>
+</tr>
+<tr>
+<td>-l, –log</td>
+<td>启用日志。 Override logger format.</td>
+</tr>
+</tbody></table>
+<p><em>deploy</em></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
+<p>部署你的网站。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-g, –generate</td>
+<td>在部署前生成</td>
+</tr>
+</tbody></table>
+<p><em>render</em></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo render &lt;file1&gt; [file2] ...</span><br></pre></td></tr></tbody></table></figure>
+
+<p>渲染文件。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-o, –output</td>
+<td>输出目标地址</td>
+</tr>
+</tbody></table>
+<p><em>migrate</em></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo migrate &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>从其他博客系统 迁移内容。</p>
+<p><em>clean</em></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></tbody></table></figure>
+
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
+<p><em>list</em></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo list &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></tbody></table></figure>
+<p>列出所有路由。</p>
+<p><em>version</em></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo version</span><br></pre></td></tr></tbody></table></figure>
+<p>显示版本信息。</p>
+<p><em>config</em></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo config [key] [value]</span><br></pre></td></tr></tbody></table></figure>
+<p>列出网站的配置（_config.yml）。 如果指定了 key，则只展示配置中对应 key 的值；如果同时指定了 key 和 value，则将配置中对应的 key 的值修改为 value。</p>
+<h3><span id="%E9%80%89%E9%A1%B9">选项</span></h3><h4><span id="%E5%AE%89%E5%85%A8%E6%A8%A1%E5%BC%8F">安全模式</span></h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --safe</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在安全模式下，不会加载插件和脚本。 当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p>
+<h4><span id="%E8%B0%83%E8%AF%95%E6%A8%A1%E5%BC%8F">调试模式</span></h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --debug</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在终端中显示调试信息并记录到 debug.log。 当您使用 Hexo 时遇到问题，可以尝试用调试模式重新执行一次。 如果您发现错误，请在 GitHub 上提出 issue。</p>
+<h4><span id="%E7%AE%80%E6%B4%81%E6%A8%A1%E5%BC%8F">简洁模式</span></h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --silent</span><br></pre></td></tr></tbody></table></figure>
+<p>静默输出到终端.</p>
+<h4><span id="%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84">自定义配置文件的路径</span></h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --config custom.yml</span><br></pre></td></tr></tbody></table></figure>
+
+<p>自定义配置文件的路径，指定这个参数后将不再使用默认的 _config.yml。 还接受一个以逗号分隔的 JSON 或 YAML 配置文件列表（无空格），该列表将把这些文件合并为一个 _multiconfig.yml 文件。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --config custom.yml,custom2.json</span><br></pre></td></tr></tbody></table></figure>
+
+<h4><span id="%E6%98%BE%E7%A4%BA%E8%8D%89%E7%A8%BF">显示草稿</span></h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --draft</span><br></pre></td></tr></tbody></table></figure>
+<p>显示 source/_drafts 文件夹中的草稿文章。</p>
+<h4><span id="%E8%87%AA%E5%AE%9A%E4%B9%89-cwd">自定义 CWD</span></h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --cwd /path/to/cwd</span><br></pre></td></tr></tbody></table></figure>
+
+<p>自定义当前工作目录（Current working directory）的路径。</p>
 </body></html>
 	</article>
 
