@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> markdown基础语法 -  zhzhongshi&#39;s site</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="https://kira.host/assets/Pictures/Others/116359b4ccf19917.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('http://img.hongyoubizhi.com/picture/pages/original/2025/02/07/11/127432705_p1.png')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="zhzhongshi&#39;s site">
+        <img
+			src="https://kira.host/assets/Pictures/Others/20220922230447.jpg"
+			alt="zhzhongshi"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://kira.host/assets/Pictures/Others/20220922230447.jpg" title="zhzhongshi">
+			<img
+				src="https://kira.host/assets/Pictures/Others/20220922230447.jpg"
+				alt="zhzhongshi"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>3</div>
+		<div><span>标签</span>2</div>
+		<div><span>分类</span>1</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3365615175&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/68818824"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/zhzhongshi/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/zhzhongshi"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/学习笔记/">
+              学习笔记
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E6%9D%82%E9%A1%B9/" style="font-size: 10px;">杂项</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">3</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2025
+		<a href="/">zhzhongshi</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://img.hongyoubizhi.com/picture/pages/regular/2021/07/09/21/24/92042302_p0_master1200.jpg?x-oss-process=image/resize,m_fill,w_1000"
+				data-sizes="auto"
+				alt="markdown基础语法"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>markdown基础语法</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2025年03月02日</a>
+			<a><i class="kirafont icon-edit-fill"></i>1.8k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 8 分钟</a>
+		</div>
+		<html><head></head><body><h1><span id="markdown-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">Markdown 基础语法</span></h1><p>Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。</p>
+<p>千万不要被“标记”、”语言“ 吓到，Markdown的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。</p>
+<p>就是这十个不到的标记符号，却能让人<strong>优雅地沉浸式记录，专注内容而不是纠结排版</strong>，达到”心中无尘，码字入神“的境界。</p>
+<h2><span id="%E6%A0%87%E9%A2%98">标题</span></h2><p>要创建标题，请在单词或短语前面添加井号 (<code>#</code>) 。<code>#</code>的数量代表了标题的级别。例如，添加三个 # 表示创建一个三级标题 (<code>&lt;h3&gt;</code>) (例如：<code>### My Header</code>)。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code># Heading level 1</code></td>
+<td><code>&lt;h1&gt;Heading level 1&lt;/h1&gt;</code></td>
+<td><h1><span id="heading-level-1">Heading level 1</span></h1></td>
+</tr>
+<tr>
+<td><code>## Heading level 2</code></td>
+<td><code>&lt;h2&gt;Heading level 2&lt;/h2&gt;</code></td>
+<td><h2><span id="heading-level-2">Heading level 2</span></h2></td>
+</tr>
+<tr>
+<td><code>### Heading level 3</code></td>
+<td><code>&lt;h3&gt;Heading level 3&lt;/h3&gt;</code></td>
+<td><h3><span id="heading-level-3">Heading level 3</span></h3></td>
+</tr>
+<tr>
+<td><code>#### Heading level 4</code></td>
+<td><code>&lt;h4&gt;Heading level 4&lt;/h4&gt;</code></td>
+<td><h4><span id="heading-level-4">Heading level 4</span></h4></td>
+</tr>
+<tr>
+<td><code>##### Heading level 5</code></td>
+<td><code>&lt;h5&gt;Heading level 5&lt;/h5&gt;</code></td>
+<td><h5><span id="heading-level-5">Heading level 5</span></h5></td>
+</tr>
+<tr>
+<td><code>###### Heading level 6</code></td>
+<td><code>&lt;h6&gt;Heading level 6&lt;/h6&gt;</code></td>
+<td><h6><span id="heading-level-6">Heading level 6</span></h6></td>
+</tr>
+</tbody></table>
+<h2><span id="%E6%AE%B5%E8%90%BD">段落</span></h2><p>要创建段落，请使用空白行将一行或多行文本进行分隔。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I really like using Markdown.</span><br><span class="line"></span><br><span class="line">I think I'll use it to format all of my documents from now on.</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>I really like using Markdown.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>I think I'll use it to format all of my documents from now on.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>I really like using Markdown.</p>
+<p>I think I’ll use it to format all of my documents from now on.</p>
+<h2><span id="%E6%8D%A2%E8%A1%8C">换行</span></h2><p>在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行(<code>&lt;br&gt;</code>)。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">This is the first line.  </span><br><span class="line">And this is the second line.</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">This is the first line.<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">And this is the second line.</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This is the first line.<br>And this is the second line.</p>
+<h2><span id="%E5%BC%BA%E8%B0%83%E8%AF%AD%E6%B3%95">强调语法</span></h2><p>通过将文本设置为粗体或斜体来强调其重要性。</p>
+<h3><span id="%E7%B2%97%E4%BD%93bold">粗体（Bold）</span></h3><p>要加粗文本，请在单词或短语的前后各添加两个星号（asterisks）或下划线（underscores）。如需加粗一个单词或短语的中间部分用以表示强调的话，请在要加粗部分的两侧各添加两个星号（asterisks）。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I just love <span class="strong">**bold text**</span>.</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I just love <span class="strong">__bold text__</span>.</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I just love <span class="tag">&lt;<span class="name">strong</span>&gt;</span>bold text<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>I just love <strong>bold text</strong>.</p>
+<h3><span id="%E6%96%9C%E4%BD%93italic">斜体（Italic）</span></h3><p>要用斜体显示文本，请在单词或短语前后添加一个星号（asterisk）或下划线（underscore）。要斜体突出单词的中间部分，请在字母前后各添加一个星号，中间不要带空格。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Italicized text is the <span class="emphasis">*cat's meow*</span>.</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Italicized text is the <span class="emphasis">_cat's meow_</span>.</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Italicized text is the <span class="tag">&lt;<span class="name">em</span>&gt;</span>cat's meow<span class="tag">&lt;/<span class="name">em</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Italicized text is the <em>cat’s meow</em>.</p>
+<h3><span id="%E7%B2%97%E4%BD%93bold%E5%92%8C%E6%96%9C%E4%BD%93italic">粗体（Bold）和斜体（Italic）</span></h3><p>要同时用粗体和斜体突出显示文本，请在单词或短语的前后各添加三个星号或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This text is <span class="strong">**<span class="emphasis">*really important*</span>**</span>.</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This text is <span class="strong">**<span class="emphasis">_really important_</span>**</span>.</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This text is <span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>really important<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span>.</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This text is <em><strong>really important</strong></em>.</p>
+<h2><span id="%E5%BC%95%E7%94%A8">引用</span></h2><p>要在文本前面添加引用，请在文本前面添加大于号（<code>&gt;</code>）和空格。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; This is a blockquote.</span></span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>This is a blockquote.</p>
+</blockquote>
+<h3><span id="%E5%A4%9A%E4%B8%AA%E6%AE%B5%E8%90%BD%E7%9A%84%E5%9D%97%E5%BC%95%E7%94%A8">多个段落的块引用</span></h3><p>块引用可以包含多个段落。为段落之间的空白行添加一个 &gt; 符号。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; This is the first paragraph in a blockquote.</span></span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt; This is the second paragraph in a blockquote.</span></span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>This is the first paragraph in a blockquote.</p>
+<p>This is the second paragraph in a blockquote.</p>
+</blockquote>
+<h3><span id="%E5%B5%8C%E5%A5%97%E5%9D%97%E5%BC%95%E7%94%A8">嵌套块引用</span></h3><p>块引用可以嵌套。为嵌套的块引用添加一个 &gt; 符号。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; This is the outer blockquote.</span></span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt; &gt; This is the inner blockquote.</span></span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>This is the outer blockquote.</p>
+<blockquote>
+<p>This is the inner blockquote.</p>
+</blockquote>
+</blockquote>
+<h3><span id="%E5%B8%A6%E6%9C%89%E5%85%B6%E5%AE%83%E5%85%83%E7%B4%A0%E7%9A%84%E5%9D%97%E5%BC%95%E7%94%A8">带有其它元素的块引用</span></h3><p>块引用可以包含其他 Markdown 元素，如列表、代码块、图片、链接等。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; Here's an example of a blockquote with a list:</span></span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt; 1. First item</span></span><br><span class="line"><span class="quote">&gt; 2. Second item</span></span><br><span class="line"><span class="quote">&gt; 3. Third item</span></span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>Here’s an example of a blockquote with a list:</p>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+</blockquote>
+<h2><span id="%E5%88%97%E8%A1%A8">列表</span></h2><p>可以将多个条目组织成有序或无序列表。</p>
+<h3><span id="%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8">有序列表</span></h3><p>要创建有序列表，请在条目前面添加数字和句点。数字和句点之间需要有一个空格。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> First item</span><br><span class="line"><span class="bullet">2.</span> Second item</span><br><span class="line"><span class="bullet">3.</span> Third item</span><br></pre></td></tr></tbody></table></figure>
+
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h3><span id="%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">无序列表</span></h3><p>要创建无序列表，请在条目前面添加一个星号、加号或减号。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> First item</span><br><span class="line"><span class="bullet">-</span> Second item</span><br><span class="line"><span class="bullet">-</span> Third item</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ul>
+<h3><span id="%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8">嵌套列表</span></h3><p>列表可以嵌套。为嵌套的列表添加四个空格或一个制表符。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> First item</span><br><span class="line"><span class="bullet">    -</span> First nested item</span><br><span class="line"><span class="bullet">    -</span> Second nested item</span><br><span class="line"><span class="bullet">2.</span> Second item</span><br><span class="line"><span class="bullet">3.</span> Third item</span><br></pre></td></tr></tbody></table></figure>
+
+<ol>
+<li>First item<ul>
+<li>First nested item</li>
+<li>Second nested item</li>
+</ul>
+</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h3><span id="%E5%9C%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E5%B5%8C%E5%A5%97%E5%85%B6%E4%BB%96%E5%85%83%E7%B4%A0">在列表中嵌套其他元素</span></h3><p>列表可以包含其他 Markdown 元素，如段落、代码块、图片、链接等。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> First item</span><br><span class="line"><span class="bullet">    -</span> First nested item</span><br><span class="line"><span class="bullet">        -</span> <span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://via.placeholder.com/150"</span> <span class="attr">alt</span>=<span class="string">"placeholder"</span>&gt;</span></span></span><br><span class="line"><span class="bullet">    -</span> Second nested item</span><br><span class="line"><span class="bullet">2.</span> Second item</span><br><span class="line"><span class="bullet">3.</span> Third item</span><br></pre></td></tr></tbody></table></figure>
+
+<ol>
+<li>First item<ul>
+<li>First nested item<ul>
+<li><img data-fancybox="gallery" data-sizes="auto" data-src="https://via.placeholder.com/150" alt="placeholder" class="lazyload"></li>
+</ul>
+</li>
+<li>Second nested item</li>
+</ul>
+</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h2><span id="%E4%BB%A3%E7%A0%81%E5%9D%97">代码块</span></h2><p>要在文本中插入代码块，请将代码用反引号（`）包裹起来。</p>
+<pre><code class="language-python">```
+print("Hello, world!")
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```html</span><br><span class="line">&lt;pre&gt;&lt;code class="language-python"&gt;print("Hello, world!")&lt;/code&gt;&lt;/pre&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+Here's an example of a code block:
+
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">"Hello, world!"</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+## 链接
+要创建链接，请在方括号内输入链接文字，然后在括号内输入链接地址。
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">GitHub</span>](<span class="link">https://github.com</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+[GitHub](https://github.com)
+
+### 链接的标题
+
+要为链接添加标题，请在链接后面添加一个空格，然后在括号内输入标题。
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">GitHub</span>](<span class="link">https://github.com "GitHub homepage"</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+[GitHub](https://github.com "GitHub homepage")
+
+### 链接的图片
+
+要在链接中插入图片，请在方括号内输入图片描述，然后在括号内输入图片地址。
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">![GitHub logo</span>](<span class="link">https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</span>)](<span class="link">https://github.com</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+[![GitHub logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)](https://github.com)
+
+## 图片
+
+要插入图片，请在方括号内输入图片描述，然后在括号内输入图片地址。
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">GitHub logo</span>](<span class="link">https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+![GitHub logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+
+### 图片的标题
+
+要为图片添加标题，请在图片后面添加一个空格，然后在括号内输入标题。
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">GitHub logo</span>](<span class="link">https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png "GitHub logo"</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+![GitHub logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png "GitHub logo")
+
+## 表格
+
+要创建表格，请在每一行的开头和结尾使用管道符（`|`）分隔单元格，并在每一行的开头使用破折号（`-`）分隔标题行。
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Header 1 | Header 2 | Header 3 |</span><br><span class="line">| -------- | -------- | -------- |</span><br><span class="line">| Cell 1   | Cell 2   | Cell 3   |</span><br><span class="line">| Cell 4   | Cell 5   | Cell 6   |</span><br></pre></td></tr></tbody></table></figure>
+
+| Header 1 | Header 2 | Header 3 |
+| -------- | -------- | -------- |
+| Cell 1   | Cell 2   | Cell 3   |
+| Cell 4   | Cell 5   | Cell 6   |
+
+## 转义字符
+
+Markdown 使用反斜杠（`\`）作为转义字符。如果需要在文本中插入反斜杠，请在反斜杠后面添加一个反斜杠。
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\<span class="emphasis">*This text will be italicized\*</span></span><br></pre></td></tr></tbody></table></figure>
+
+可做转义的字符
+- \   反斜杠
+- `   反引号
+- *   星号
+- _   底线
+- {}  花括号
+- []  方括号
+- ()  括号
+- #   井号
+- +   加号
+- -   减号
+- .   句点
+- !   惊叹号
+- |   管道符
+
+</code></pre></body></html>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>zhzhongshi<br>
+        <strong>本文链接：</strong><a href="https://zhzhongshi.github.io/2025/03/02/0302/markdown/" title="https:&#x2F;&#x2F;zhzhongshi.github.io&#x2F;2025&#x2F;03&#x2F;02&#x2F;0302&#x2F;markdown&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;zhzhongshi.github.io&#x2F;2025&#x2F;03&#x2F;02&#x2F;0302&#x2F;markdown&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			   
+			<!-- 在找到当前文章所在的 index -->
+			          
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/markdown/" rel="tag">markdown</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="zhzhongshi/zhzhongshi.github.io"
+      data-repo-id="R_kgDOG6ZAYA"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOG6ZAYM4CndCz"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="zh-CN"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
